@@ -791,7 +791,7 @@ section
 .home_slider_content
 {
 	position: absolute;
-	top: 50%;
+	top: 55%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	-moz-transform: translate(-50%, -50%);
@@ -807,7 +807,7 @@ section
 .home_slider_content h1:first-child
 {
 	font-size: 112px;
-	font-weight: 900;
+	font-weight: 40;
 	color: #FFFFFF;
 	text-transform: uppercase;
 }
