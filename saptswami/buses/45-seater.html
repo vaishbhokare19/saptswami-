@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>45 Seater Bus On Rent In Pune | Saptswami</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS links -->
+    <link rel="stylesheet" type="text/css" href="../styles/bootstrap4/bootstrap.min.css">
+    <link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="../styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="../styles/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        /* same custom css as 4-seater.html */
+        @media (max-width: 991px) {
+            .gallery-row {
+                flex-direction: column;
+            }
+
+            .gallery-img,
+            .main-img {
+                max-width: 100% !important;
+            }
+
+            .col-lg-6,
+            .col-lg-3 {
+                margin-bottom: 24px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .main-img {
+                max-width: 90vw !important;
+            }
+
+            .img-modal-bg img {
+                max-width: 98vw;
+            }
+
+            .img-modal-bg .close-modal {
+                right: 16px;
+                top: 16px;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes zoomIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-zoomIn {
+            animation: zoomIn 0.8s ease forwards;
+        }
+
+        .gallery-img {
+            height: 60px;
+            margin: 0 6px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: box-shadow 0.2s, transform 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 2px solid transparent;
+            background: #fff;
+        }
+
+        .gallery-img.active,
+        .gallery-img:hover {
+            box-shadow: 0 4px 16px #fa9e1b55;
+            transform: scale(1.08);
+            border: 2px solid #fa9e1b;
+        }
+
+        .main-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            transition: box-shadow 0.2s, transform 0.2s;
+            background: #fff;
+        }
+
+        .main-img:hover {
+            box-shadow: 0 8px 32px #fa9e1b33;
+            transform: scale(1.03);
+        }
+
+        .img-modal-bg {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.85);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img-modal-bg.active {
+            display: flex;
+        }
+
+        .img-modal-bg img {
+            max-width: 90vw;
+            max-height: 80vh;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px #fa9e1b55;
+            animation: zoomIn 0.5s;
+            background: #fff;
+        }
+
+        .img-modal-bg .close-modal {
+            position: absolute;
+            top: 32px;
+            right: 48px;
+            font-size: 2.5rem;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 10001;
+            transition: color 0.2s;
+        }
+
+        .img-modal-bg .close-modal:hover {
+            color: #fa9e1b;
+        }
+
+        .badge {
+            font-size: 1rem;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            box-shadow: 0 2px 8px rgba(250, 158, 27, 0.08);
+            background: #fa9e1b;
+            color: #222 !important;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        h4,
+        h5.section_title {
+            color: #fa9e1b;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .btn-warning {
+            background: #fa9e1b !important;
+            color: #222 !important;
+            font-weight: 600;
+            border-radius: 5px;
+            border: none;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .btn-warning:hover {
+            background: #181818 !important;
+            color: #fa9e1b !important;
+        }
+
+        .col-lg-3>div,
+        .col-lg-6>div {
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="super_container">
+
+        <!-- Navbar/Header -->
+        <header class="header">
+            <!-- reuse same navbar as 4-seater.html -->
+            <div class="top_bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col d-flex flex-row">
+                            <div class="phone">+45 345 3324 56789</div>
+                            <div class="social">
+                                <ul class="social_list">
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-pinterest"
+                                                aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-facebook"
+                                                aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-twitter"
+                                                aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-dribbble"
+                                                aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-behance"
+                                                aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-linkedin"
+                                                aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="user_box ml-auto">
+                                <div class="user_box_login user_box_link"><a href="#">login</a></div>
+                                <div class="user_box_register user_box_link"><a href="#">register</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="main_nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
+                            <div class="logo_container">
+                                <div class="logo"><a href="#"><img src="images/logo.png" alt="">Saptswami</a></div>
+                            </div>
+                            <div class="main_nav_container ml-auto">
+                                <ul class="main_nav_list">
+                                    <li class="main_nav_item"><a href="../index.html">Home</a></li>
+                                    <li class="main_nav_item"><a href="../about.html">About Us</a></li>
+                                    <!-- Cars Dropdown -->
+                                    <li class="main_nav_item dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cars</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-submenu">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Car Type</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="swift-dzire.html">Swift Dzire on rent in Pune</a></li>
+                                                    <li><a href="ertiga.html">Ertiga on rent in Pune</a></li>
+                                                    <li><a href="innova.html">Innova on rent in Pune</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown-submenu">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">By
+                                                    Seating</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="4-seater.html">4 Seater Car on rent in Pune</a></li>
+                                                    <li><a href="7-seater.html">7 Seater Car on rent in Pune</a></li>
+                                                    <li><a href="7-seater.html">7 Seater Car on rent in Pimpri
+                                                            Chinchwad</a></li>
+                                                    <li><a href="9-seater.html">9 Seater Car on rent in Pune</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- Buses Dropdown -->
+                                    <li class="main_nav_item dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Buses</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../buses/27-seater.html">27 Seater Bus on rent in Pune</a></li>
+                                            <li><a href="../buses/30-seater.html">30 Seater Bus on rent in Pune</a></li>
+                                            <li><a href="../buses/32-seater.html">32 Seater Bus on rent in Pune</a></li>
+                                            <li><a href="../buses/35-seater.html">35 Seater Bus on rent in Pune</a></li>
+                                            <li><a href="../buses/40-seater.html">40 Seater Bus on rent in Pune</a></li>
+                                            <li><a href="../buses/45-seater.html">45 Seater Bus on rent in Pune</a></li>
+                                            <li><a href="../buses/50-seater.html">50 Seater Bus on rent in Pune</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- Tempo Traveller Dropdown -->
+                                    <li class="main_nav_item dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tempo Traveller</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../tempo-traveller/9-seater.html">9 Seater Tempo Traveller on
+                                                    rent in Pune</a></li>
+                                            <li><a href="../tempo-traveller/12-seater.html">12 Seater Tempo Traveller on
+                                                    rent in Pune</a></li>
+                                            <li><a href="../tempo-traveller/13-seater.html">13 Seater Tempo Traveller on
+                                                    rent in Pune</a></li>
+                                            <li><a href="../tempo-traveller/17-seater.html">17 Seater Tempo Traveller on
+                                                    rent in Pune</a></li>
+                                            <li><a href="../tempo-traveller/20-seater.html">20 Seater Tempo Traveller on
+                                                    rent in Pune</a></li>
+                                            <li><a href="../tempo-traveller/24-seater.html">24 Seater Tempo Traveller on
+                                                    rent in Pune</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- Tourist Van Dropdown -->
+                                    <li class="main_nav_item dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tourist Van</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../tourist-van/tata-winger.html">Tata Winger on rent in
+                                                    Pune</a></li>
+                                            <li><a href="../tourist-van/tata-winger-pcmc.html">Tata Winger on rent in
+                                                    PCMC</a></li>
+                                            <li><a href="../tourist-van/force-urbania.html">Force Urbania Bus on rent in
+                                                    Pune</a></li>
+                                            <li><a href="../tourist-van/force-urbania-pcmc.html">Force Urbania Bus on
+                                                    rent in PCMC</a></li>
+                                            <li><a href="../tourist-van/mumbai-to-pune.html">Mumbai to Pune Airport Cab
+                                                    Service</a></li>
+                                            <li><a href="../tourist-van/pune-to-mumbai.html">Pune to Mumbai Airport Cab
+                                                    Service</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="main_nav_item"><a href="../contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="content_search ml-lg-0 ml-auto">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
+                                    height="17px" viewBox="0 0 512 512" enable-background="new 0 0 512 512"
+                                    xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path class="mag_glass" fill="#FFFFFF"
+                                                    d="M78.438,216.78c0,57.906,22.55,112.343,63.493,153.287c40.945,40.944,95.383,63.494,153.287,63.494
+                                        s112.344-22.55,153.287-63.494C489.451,329.123,512,274.686,512,216.78c0-57.904-22.549-112.342-63.494-153.286
+                                        C407.563,22.549,353.124,0,295.219,0c-57.904,0-112.342,22.549-153.287,63.494C100.988,104.438,78.439,158.876,78.438,216.78z
+                                        M119.804,216.78c0-96.725,78.69-175.416,175.415-175.416s175.418,78.691,175.418,175.416
+                                        c0,96.725-78.691,175.416-175.416,175.416C198.495,392.195,119.804,313.505,119.804,216.78z" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path class="mag_glass" fill="#FFFFFF" d="M6.057,505.942c4.038,4.039,9.332,6.058,14.625,6.058s10.587-2.019,14.625-6.058L171.268,369.98
+                                        c8.076-8.076,8.076-21.172,0-29.248c-8.076-8.078-21.172-8.078-29.249,0L6.057,476.693
+                                        C-2.019,484.77-2.019,497.865,6.057,505.942z" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <form id="search_form" class="search_form bez_1">
+                                <input type="search" class="search_content_input bez_1">
+                            </form>
+                            <div class="book-now-btn">
+                                <a href="../contact.html">Book Now</a>
+                            </div>
+                            <div class="hamburger">
+                                <i class="fa fa-bars trans_200"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <div style="background:url('../images/hero.png') center/cover no-repeat; position:relative; height:260px;">
+            <div style="background:rgba(0,0,0,0.55); position:absolute; top:0; left:0; width:100%; height:100%;"></div>
+            <div class="container position-relative" style="z-index:2; height:100%;">
+                <div class="row align-items-center justify-content-center" style="height:100%;">
+                    <div class="col-12 text-center">
+                        <h1 style="color:#fff; font-weight:700; font-size:2.4rem; margin-top:80px;"
+                            class="animate-fadeInUp">45 Seater Bus On Rent In Pune</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 27 Seater Section Start -->
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <!-- Car Image & Gallery -->
+                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 text-center animate-zoomIn">
+                    <img src="../images/45-seater-main.jpeg" alt="7 Seater Car" class="main-img" id="mainCarImg">
+                    <div class="d-flex justify-content-center mt-3 gallery-row">
+                        <img src="../images/45-seater-main.jpeg" class="gallery-img active"
+                            data-img="../images/45-seater-main.jpeg" alt="7 Seater Car">
+                        <img src="../images/45-seater-2.webp" class="gallery-img" data-img="../images/45-seater-2.webp"
+                            alt="7 Seater Car 2">
+                        <img src="../images/45-seater-3.jpg" class="gallery-img" data-img="../images/45-seater-3.jpg"
+                            alt="7 Seater Car 3">
+                    </div>
+                </div>
+                <!-- Request Callback Form -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 animate-fadeInUp">
+                    <div style="background:#f7f7f7; border-radius:10px; padding:24px;">
+                        <h5 class="mb-3 section_title">Request A Callback</h5>
+                        <form>
+                            <input type="text" class="form-control mb-2" placeholder="Name" required>
+                            <input type="tel" class="form-control mb-2" placeholder="Phone" required>
+                            <input type="email" class="form-control mb-2" placeholder="Email" required>
+                            <textarea class="form-control mb-2" placeholder="Message" rows="3"></textarea>
+                            <button type="submit" class="btn btn-warning w-100">Send Message <i
+                                    class="fa fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Have Questions Box -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 animate-fadeInUp">
+                    <div style="background:#3b5fc9; border-radius:10px; padding:24px; color:#fff;">
+                        <h5 class="mb-3 section_title">Have Questions</h5>
+                        <p>Looking for affordable 45 Seater bus rentals in Pune? Contact us for hassle-free journeys with
+                            spacious cars, professional drivers, and 24/7 support.</p>
+                        <a href="tel:+919922244412" class="btn btn-warning w-100">Call Us Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Features & Information Side by Side -->
+            <div class="row justify-content-center mt-5 align-items-start">
+                <!-- Features Left -->
+                <div class="col-lg-5 col-md-12 mb-4 animate-fadeInUp">
+                    <h4 class="mb-4 section_title" style="color:#181818;">FEATURES</h4>
+                    <div class="row text-center">
+                        <div class="col-6 mb-3"><span class="badge"><i class="fa fa-check"></i> Spacious Seating</span>
+                        </div>
+                        <div class="col-6 mb-3"><span class="badge"><i class="fa fa-check"></i> AC / Non AC</span></div>
+                        <div class="col-6 mb-3"><span class="badge"><i class="fa fa-music"></i> Music System</span>
+                        </div>
+                        <div class="col-6 mb-3"><span class="badge"><i class="fa fa-check"></i> Clean &
+                                Comfortable</span></div>
+                        <div class="col-6 mb-3"><span class="badge"><i class="fa fa-user"></i> Experienced Driver</span>
+                        </div>
+                        <div class="col-6 mb-3"><span class="badge"><i class="fa fa-headphones"></i> 24/7 Customer
+                                Support</span></div>
+                    </div>
+                </div>
+                <!-- Information Right -->
+                <div class="col-lg-7 col-md-12 animate-fadeInUp" style="animation-delay:0.3s;">
+                    <h5 class="mb-3 section_title" style="color:#fa9e1b; font-size:2rem; font-weight:700;">BUS
+                        INFORMATION</h5>
+                    <p style="color:#181818; font-size:1.08rem;">
+                        Saptswami Travelers has been one of the most trusted names for renting AC and Non-AC buses in Pune and Pimpri Chinchwad for many years. Whether your trip is long or short, you can book a bus with us for group tours, weddings, school trips, or corporate travel. We provide luxury coaches, tempo travellers, and buses with certified, professional, and well-trained drivers to ensure your journey is safe, comfortable, and hassle-free.
+
+Saptswami Travelers offers AC or Non-AC Tata Winger, Tempo Traveller, Mini Bus, and Luxury Bus rentals in Pune. Our customer support is available 24/7, and we provide pick-up and drop-off from any location in Pune, Maharashtra. We operate services from Pune to major tourist attractions across India, covering all popular cities and states.
+
+Whether it’s a family vacation, corporate tour, school or college picnic, or a wedding event, Saptswami Travelers ensures a reliable, affordable, and enjoyable travel experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- 7 Seater Section End -->
+
+        <!-- Image Modal for zoom -->
+        <div class="img-modal-bg" id="imgModal">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <img src="" alt="Zoomed Car" id="modalImg">
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer text-light pt-5 pb-4">
+            <!-- reuse same footer as 4-seater.html -->
+            <div class="container">
+                <div class="row">
+                    <!-- About Column -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div>
+                            <img src="images/logo.png" alt="Saptswami Logo" style="width:70px;">
+                            <h4 class="mt-3">Saptswami Travellers</h4>
+                            <span class="badge mb-3">PUNE | CITY | AIRPORT | PCMC</span>
+                            <p>
+                                Saptswami Travels offers 24×365 online booking of Tempo Traveller,
+                                luxury & budget Cars and Buses at very reasonable tariff.
+                            </p>
+                            <div>
+                                <a href="#" class="text-light me-3"><i class="fa fa-facebook"></i></a>
+                                <a href="#" class="text-light"><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="col-md-6 col-lg-2 mb-4">
+                        <h5 class="fw-bold mb-3">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="../about.html" class="text-light">About Us</a></li>
+                            <li><a href="#" class="text-light">Photo Gallery</a></li>
+                            <li><a href="../blog.html" class="text-light">Blog</a></li>
+                            <li><a href="#" class="text-light">Privacy Policy</a></li>
+                            <li><a href="#" class="text-light">Terms & Conditions</a></li>
+                            <li><a href="../contact.html" class="text-light">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!-- Our Services -->
+                    <div class="col-md-6 col-lg-2 mb-4">
+                        <h5 class="fw-bold mb-3">Our Services</h5>
+                        <ul class="list-unstyled">
+                            <li>Tempo Travellers (AC/N.AC) on Rent</li>
+                            <li>Car (AC/N.AC) on Rent</li>
+                            <li>Bus (AC/N.AC) on Rent</li>
+                        </ul>
+                    </div>
+                    <!-- Contact Info -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <h5 class="fw-bold mb-3">Contact Info</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-map-marker"></i> Shop No. B - 120, Ashoka Mall Opposite,<br>
+                                Sun-N-Sand Hotel, Near Ranka Jewellers,<br>
+                                Bund Garden Rd, Pune, Maharashtra 411001</li>
+                            <li class="mt-2"><i class="fa fa-envelope"></i>
+                                <a href="mailto:saptswamitravels@gmail.com"
+                                    class="text-light">saptswamitravels@gmail.com</a>
+                            </li>
+                            <li class="mt-2"><i class="fa fa-phone"></i>
+                                <a href="tel:+919922244412" class="text-light">+91 9922244412</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Rental Services Row (3 columns in same line) -->
+                <div class="row mt-4">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <h5 class="fw-bold mb-3">Tempo Traveller Rental Service</h5>
+                        <ul class="list-unstyled">
+                            <li>9 Seater Tempo Travellers On Rent in Pune</li>
+                            <li>13 Seater Tempo Travellers On Rent in Pune</li>
+                            <li>17 Seater Tempo Travellers On Rent in Pune</li>
+                            <li>20 Seater Tempo Travellers On Rent in Pune</li>
+                            <li>24 Seater Tempo Travellers On Rent in Pune</li>
+                            <li>Tata Winger on Rent in Pune</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <h5 class="fw-bold mb-3">Car Rental Service</h5>
+                        <ul class="list-unstyled">
+                            <li>7 Seater Car On Rent in Pimpri Chinchwad</li>
+                            <li>7 Seater Car On Rent in Pune</li>
+                            <li>9 Seater Car On Rent in Pune</li>
+                            <li>4 Seater Car On Rent in Pune</li>
+                            <li>Pune to Mumbai Cab Service</li>
+                            <li>Mumbai to Pune Cab Service</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <h5 class="fw-bold mb-3">Bus Rental Service</h5>
+                        <ul class="list-unstyled">
+                            <li>27 Seater Bus On Rent in Pune</li>
+                            <li>30 Seater Bus On Rent in Pune</li>
+                            <li>32 Seater Bus On Rent in Pune</li>
+                            <li>35 Seater Bus On Rent in Pune</li>
+                            <li>40 Seater Bus On Rent in Pune</li>
+                            <li>45 Seater Bus On Rent in Pune</li>
+                            <li>50 Seater Bus On Rent in Pune</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Price Note -->
+                <div class="text-center mt-3">
+                    <p class="text-warning fw-bold mb-0">
+                        The Prices Are Totally Dependent on Date, Destination & Duration.
+                    </p>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="text-center pt-3 mt-3 border-top border-secondary small">
+                <span>
+                    Designed by : Exads IT Solutions Pvt. Ltd. | ©2025 Saptswami Travellers. All rights reserved.
+                </span>
+            </div>
+            <!-- copy your footer code here -->
+        </footer>
+    </div>
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../styles/bootstrap4/popper.js"></script>
+    <script src="../styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="../plugins/easing/easing.js"></script>
+    <script src="../js/custom.js"></script>
+    <script>
+        // Gallery click logic
+        const galleryImgs = document.querySelectorAll('.gallery-img');
+        const mainImg = document.getElementById('mainCarImg');
+        galleryImgs.forEach(img => {
+            img.addEventListener('click', function () {
+                galleryImgs.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                mainImg.src = this.dataset.img;
+            });
+        });
+        // Modal logic
+        const imgModal = document.getElementById('imgModal');
+        const modalImg = document.getElementById('modalImg');
+        const closeModal = document.getElementById('closeModal');
+        mainImg.addEventListener('click', function () {
+            modalImg.src = this.src;
+            imgModal.classList.add('active');
+        });
+        closeModal.addEventListener('click', function () {
+            imgModal.classList.remove('active');
+        });
+        imgModal.addEventListener('click', function (e) {
+            if (e.target === imgModal) imgModal.classList.remove('active');
+        });
+    </script>
+</body>
+
+</html>

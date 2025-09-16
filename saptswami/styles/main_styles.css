@@ -915,23 +915,33 @@ section
 	transform: translate(-50%, -50%);
 	z-index: 11;
 }
-.home_slider_content h1
-{
-	margin-bottom: 0px;
+.home_slider_content h1 {
+  font-size: 60px;   /* reduced from 112px/100px */
+  font-weight: 700;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
-.home_slider_content h1:first-child
-{
-	font-size: 112px;
-	font-weight: 40;
-	color: #FFFFFF;
-	text-transform: uppercase;
+
+.home_slider_content h1 .brand {
+  color: #fa9e1b;   /* highlight brand name in orange */
 }
-.home_slider_content h1:nth-child(2)
-{
-	font-family: 'Beyond';
-	font-size: 100px;
-	color: #FFFFFF;
-	margin-top: -34px;
+
+.home_slider_content h1 .tagline {
+  color: #fff;      /* keep tagline in white */
+  font-weight: 400;
+  margin-left: 10px;
+}
+@media (max-width: 992px) {
+  .home_slider_content h1 {
+    font-size: 36px; /* responsive for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .home_slider_content h1 {
+    font-size: 26px; /* responsive for mobile */
+  }
 }
 .home_slider_button
 {

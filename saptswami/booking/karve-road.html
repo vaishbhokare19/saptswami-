@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saptswami Travels</title>
+    <style>
+        /* --- General Styles --- */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* --- Hero Section Styles --- */
+        .hero-section {
+            /* Replace this URL with your actual background image */
+          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero.png');
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .hero-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            gap: 40px;
+        }
+
+        /* --- Left Content Column --- */
+        .left-column {
+            flex: 1;
+            color: #ffffff;
+            padding-right: 20px;
+        }
+
+        .left-column .sub-heading {
+            color: #f39c12; /* Warm orange color */
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .left-column .main-heading {
+            font-size: 2.8rem;
+            font-weight: bold;
+            line-height: 1.2;
+            margin: 0 0 30px 0;
+        }
+
+        .call-now-btn {
+            background-color: #f39c12;
+            color: #ffffff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+            display: inline-block;
+        }
+
+        /* --- Right Form Column --- */
+        .right-column {
+            flex-basis: 400px;
+        }
+
+        .callback-form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .callback-form h2 {
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: #333333;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555555;
+            font-size: 0.9rem;
+        }
+
+        .form-group .required {
+            color: red;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            font-size: 1rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #f39c12;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 900px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .left-column {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+
+            .left-column .main-heading {
+                font-size: 2.2rem;
+            }
+
+            .right-column {
+                width: 100%;
+                max-width: 450px;
+            }
+
+            .callback-form h2 {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="left-column">
+                <p class="sub-heading">Welcome To Saptswami Travels</p>
+                <h1 class="main-heading">Find The Perfect Bus, Tempo Traveller Or Car On Rent In Karve road, Pune</h1>
+                <a href="tel:+910000000000" class="call-now-btn">&#9742; Call Now</a>
+            </div>
+
+            <div class="right-column">
+                <form class="callback-form" action="#" method="post">
+                    <h2>Request A Callback</h2>
+                    <div class="form-group">
+                        <label for="name">Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message &#x27A4;</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
